@@ -1,11 +1,13 @@
 import React from 'react';
-import ListItem from './ListItem.jsx';
+import BeerList from './BeerList.jsx';
+import Search from './Search.jsx';
 
 const List = (props) => (
   <div>
-    <h4> List Component </h4>
-    There are { props.items.length } items.
-    { props.items.map(item => <ListItem item={item}/>)}
+    <div> <Search searchForBeer = {props.search}/></div>
+      <div> {props.searchedBeer} <button>Drank DAT!!!</button></div>
+      You have drank { props.beer.length } beers.
+      {props.beer.map(beer => <BeerList beer={beer}/>)}
   </div>
 )
 

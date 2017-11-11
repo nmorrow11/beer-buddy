@@ -11,21 +11,30 @@ db.once('open', function() {
   console.log('mongoose connected successfully');
 });
 
-var itemSchema = mongoose.Schema({
-  quantity: Number,
+var beerSchema = mongoose.Schema({
+  name: String,
   description: String
 });
 
-var Item = mongoose.model('Item', itemSchema);
+var Beer = mongoose.model('Beer', beerSchema);
 
 var selectAll = function(callback) {
-  Item.find({}, function(err, items) {
+  Beer.find({}, function(err, beers) {
     if(err) {
       callback(err, null);
     } else {
-      callback(null, items);
+      callback(null, beers);
     }
   });
 };
 
+// var coors = new Beer({
+//   name:'Coors',
+//   description:'Mountains are blue'
+// })
+// coors.save(function(err){
+//   if(err){
+//     console.log(err)
+//   }
+// })
 module.exports.selectAll = selectAll;

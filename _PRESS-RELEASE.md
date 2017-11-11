@@ -18,27 +18,36 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+Beer Buddy.
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+Track and rate the beers you have drank.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
+If you are curious about a beer or have drank a beer and would like to see more details and rate it you can use 
+Beer buddy to store and research beers.
+
 ## Problem ##
   > Describe the problem your product solves.
+Before you’re too drunk to remember that delicious beer you drank you can save into beer buddy so you can buy some another day! Also you can rate these beers and save you entire list for posterity. Additional possible functionality includes finding food pairings or searching for seasonal beers.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+By simply typing a beer name in you can receive a lot of info about the beer or you can toggle your search to find beers that go well with certain foods or what seasonal beers are out.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+“Beer Buddy, so you’re never drinking alone!”
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+“I used to drink so much I could never remember the beers I drank, but thanks to Beer Buddy I now have a list of delicious beer!”
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
