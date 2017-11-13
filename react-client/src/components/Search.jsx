@@ -16,15 +16,17 @@ class Search extends React.Component {
   }
 
   search(){
-  	console.log(this.state.searchText)
   	this.props.searchForBeer(this.state.searchText)
+    this.setState({
+      searchText: ''
+    })
   }
 
   render() {
-  	console.log('rendering search')
   	return (
   	  <div>
-		<input type ='text' placeholder= "Search" onChange={this.handleChange.bind(this)} /> <button onClick={this.search.bind(this)}>Search</button>
+		    <input className='searchBar' type ='text' placeholder= "Search" value={this.state.searchText} onChange={this.handleChange.bind(this)} />
+        <button className='searchButton' onClick={this.search.bind(this)}>Find a Beer!</button>
   	  </div>
   	);
   }

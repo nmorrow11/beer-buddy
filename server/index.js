@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var key = require('../config.js');
 var http = require('http');
-var beers = require('../database-mongo');
+var myBeers = require('../database-mongo');
 var BreweryDb = require('brewerydb-node');
 var brewdb = new BreweryDb(key.key);
 var app = express();
@@ -11,21 +11,19 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../react-client/dist'));
 
 app.post('/beers', function(req,res) {
-  var beerName = req.body.beer;
-  brewdb.search.beers({q:beerName}, function(err, data){
-   	console.log(err)
- 	res.json(data[0]);
- })
-  //this is going to go to beer api and get the beer
-  //then its going to display the beer
-  //if the user wants to save the beer they will click a button
-
-
+  if(req.body.beer.flag){
+  	myBeers.save(req.body.beer)
+  } else {
+    var beerName = req.body.beer;
+    brewdb.search.beers({q:beerName}, function(err, data){
+   	res.json(data[0]);
+   })
+  }
 });
 
 app.get('/beers', function (req, res) {
   var usersBrew = req.url.split('=')[1];
-  beers.selectAll(function(err, data) {
+  myBeers.selectAll(function(err, data) {
     if(err) {
       res.sendStatus(500);
     } else {

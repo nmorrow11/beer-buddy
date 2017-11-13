@@ -28,13 +28,27 @@ var selectAll = function(callback) {
   });
 };
 
-// var coors = new Beer({
-//   name:'Coors',
-//   description:'Mountains are blue'
+var save = function(beerToSave) {
+  var savingBeer = beerToSave;
+  savingBeer = new Beer({
+    name: beerToSave.name,
+    description: beerToSave.desc
+  })
+  savingBeer.save(function(err){
+    if(err){
+      console.log(err)
+    }
+  });
+};
+
+// var bud = new Beer({
+//   name:'Bud Light',
+//   description:'Dilly Dilly'
 // })
-// coors.save(function(err){
+// bud.save(function(err){
 //   if(err){
 //     console.log(err)
 //   }
 // })
 module.exports.selectAll = selectAll;
+module.exports.save = save;

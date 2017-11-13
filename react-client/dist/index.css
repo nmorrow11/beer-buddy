@@ -1,0 +1,30 @@
+body {
+  background-color: #49befe;
+}
+
+.title {
+ color:blue;
+ text-align: center;
+}
+
+h1 {
+  display:inline-block;
+  vertical-align: top;
+  line-height: 150px;
+  margin: 0;
+}
+
+.searchBar {
+  height:30px;
+  font-size:24px;
+}
+
+.searchButton {
+  height: 30px;
+  font-size: 24px;
+}
+
+.beerDisplay {
+  padding: 10px;
+  font-size: 18px;
+}
